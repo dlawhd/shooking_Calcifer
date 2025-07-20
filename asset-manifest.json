@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/shooking_Calcifer/static/css/main.7f79eb98.css",
+    "main.js": "/shooking_Calcifer/static/js/main.cf811256.js",
+    "static/js/453.f18c81f8.chunk.js": "/shooking_Calcifer/static/js/453.f18c81f8.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/shooking_Calcifer/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/bootstrap-icons.woff2?": "/shooking_Calcifer/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "index.html": "/shooking_Calcifer/index.html",
+    "main.7f79eb98.css.map": "/shooking_Calcifer/static/css/main.7f79eb98.css.map",
+    "main.cf811256.js.map": "/shooking_Calcifer/static/js/main.cf811256.js.map",
+    "453.f18c81f8.chunk.js.map": "/shooking_Calcifer/static/js/453.f18c81f8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7f79eb98.css",
+    "static/js/main.cf811256.js"
+  ]
+}
