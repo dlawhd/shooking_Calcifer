@@ -3,8 +3,9 @@ import ProductCard from './ProductCard';
 
 function ProductList() {
   const products = [
-    { id: 1, name: '운동화', price: 50000, image: '/images/sh.jpeg', description: '편하고 가벼운 운동화입니다.' },
-    { id: 2, name: '샌들', price: 30000, image: '/images/san.jpeg', description: '여름에 신기 좋은 시원한 샌들입니다.' },
+    { id: 1, name: '운동화', price: 50000, image: process.env.PUBLIC_URL + '/images/sh.jpeg'
+, description: '편하고 가벼운 운동화입니다.' },
+    { id: 2, name: '샌들', price: 30000, image: process.env.PUBLIC_URL + '/images/san.jpeg', description: '여름에 신기 좋은 시원한 샌들입니다.' },
     // 추가 상품 필요시 더 작성
   ];
 

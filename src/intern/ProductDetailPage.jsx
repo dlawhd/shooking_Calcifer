@@ -7,8 +7,8 @@ function ProductDetailPage() {
   const { addToCart } = useContext(CartContext);
 
   const products = [
-    { id: 1, name: '운동화', price: 50000, image: '/images/sh.jpeg', description: '편한 운동화입니다.' },
-    { id: 2, name: '샌들', price: 30000, image: '/images/san.jpeg', description: '여름에 신기 좋은 시원한 샌들입니다.' },
+    { id: 1, name: '운동화', price: 50000, image: process.env.PUBLIC_URL + '/images/sh.jpeg', description: '편한 운동화입니다.' },
+    { id: 2, name: '샌들', price: 30000, image: process.env.PUBLIC_URL + '/images/san.jpeg', description: '여름에 신기 좋은 시원한 샌들입니다.' },
   ];
 
   const product = products.find(p => p.id === parseInt(productId));
