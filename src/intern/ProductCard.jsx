@@ -1,9 +1,17 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CartContext } from './CartContext';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import CardModal from './CardModal';
 
 function ProductCard({ product }) {
-  const { addToCart } = useContext(CartContext);
+const { addToCart } = useContext(CartContext); //
+
+  const [showModal, setShowModal] = useState(false);
+    const navigate = useNavigate();
+
+    const handleBuyNow = () => {
+      navigate('/register-card', { state: { product } });  // 상품 정보도 함께 전달
+    };
 
   return (
     <div className="card h-100 shadow-sm">
@@ -17,14 +25,26 @@ function ProductCard({ product }) {
       </Link>
       <div className="card-body d-flex flex-column justify-content-between">
         <h5 className="card-title">{product.name}</h5>
+        <p className="card-text text-muted">{product.description}</p>
         <p className="card-text fw-bold">{product.price.toLocaleString()}원</p>
-        <button
-          className="btn btn-primary mt-auto"
-          onClick={() => addToCart(product)}
-        >
-          담기
-        </button>
+
+        <div className="d-flex gap-2 mt-auto">
+          <button
+            className="btn btn-dark flex-fill"
+            onClick={() => addToCart(product)}
+          >
+            담기
+          </button>
+          <button
+            className="btn flex-fill"
+            style={{ backgroundColor: '#FFEB3B', fontWeight: 600 }}
+            onClick={handleBuyNow}
+          >
+            구매
+          </button>
+        </div>
       </div>
+      {showModal && <CardModal onClose={() => setShowModal(false)} />}
     </div>
   );
 }

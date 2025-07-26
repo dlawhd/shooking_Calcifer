@@ -1,7 +1,10 @@
 import React, { useContext } from 'react';
 import { CartContext } from './CartContext';
+import { useNavigate } from 'react-router-dom';
+
 
 function CartPage() {
+    const navigate = useNavigate();
   const { cartItems, increaseQuantity, decreaseQuantity, removeFromCart } = useContext(CartContext);
 
   const totalPrice = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
@@ -37,7 +40,15 @@ function CartPage() {
         </div>
       ))}
 
-      <h3 className="text-end mt-4">총 가격: <span className="text-primary">{totalPrice.toLocaleString()}원</span></h3>
+      <div className="text-end mt-4">
+        <h3>총 가격: <span className="text-primary">{totalPrice.toLocaleString()}원</span></h3>
+        <button
+          className="btn btn-warning mt-3 fw-bold"
+          onClick={() => navigate('/register-card')}
+        >
+          결제하기
+        </button>
+      </div>
     </div>
   );
 }

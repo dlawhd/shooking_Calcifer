@@ -5,6 +5,9 @@ import Header from './intern/Header';
 import ProductList from './intern/ProductList';
 import CartPage from './intern/CartPage';
 import ProductDetailPage from './intern/ProductDetailPage';
+import PaymentPage from './intern/PaymentPage';
+import CardRegisterPage from './intern/CardRegisterPage';
+import CardListPage from './intern/CardListPage';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
           <Route path="/" element={<ProductList />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/product/:productId" element={<ProductDetailPage />} /> {/* 추가 */}
+          <Route path="/register-card" element={<CardRegisterPage />} />
+          <Route path="/my-cards" element={<CardListPage />} />
+          <Route path="/payment" element={<PaymentPage />} />
         </Routes>
       </Router>
     </CartProvider>
